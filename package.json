@@ -1,0 +1,23 @@
+{
+  "name": "visualization-graph",
+  "version": "1.0.0",
+  "description": "This repository is aimed to displayed all kinds of visualization graph",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/maywanting/visualization-graph.git"
+  },
+  "keywords": [
+    "visualization",
+    "graph"
+  ],
+  "author": "may",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maywanting/visualization-graph/issues"
+  },
+  "homepage": "https://github.com/maywanting/visualization-graph#readme"
+}
