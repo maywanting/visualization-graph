@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Display</title>
+        <link href="src/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="src/plotly-latest.min.js"></script>
+		<script src="src/three.min.js"></script>
+        <script src="src/OrbitControls.js"></script>
+        <script src="src/index.js"></script>
+    </head>
+    <body>
+        <nav class="navbar  navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav col-lg-12 col-md-12">
+                        <li class="text-center col-lg-1 col-md-1 active"><a href="#" onclick="changeGraph('TSP')" id="buttonTSP">TSP</a></li>
+                        <li class="text-center col-lg-1 col-md-1"><a href="#" onclick="changeGraph('TSP-X')" id="buttonTSP-X">TSP-X</a></li>
+                        <li class="text-center col-lg-1 col-md-1"><a href="#" onclick="changeGraph('SP2D')" id="buttonSP2D">SP2D</a></li>
+                        <li class="text-center col-lg-1 col-md-1"><a href="#" id="buttonSP3D" onclick="changeGraph('SP3D')">SP3D</a></li>
+                        <li class="text-center col-lg-1 col-md-1"><a href="#" id="buttonG2D" onclick="changeGraph('G2D')">G2D</a></li>
+                        <li class="text-center col-lg-1 col-md-1"><a href="#" id="buttonG3D" onclick="changeGraph('G3D')">G3D</a></li>
+                        <li class="text-center col-lg-1 col-md-1"><a href="#" id="buttonMP3D" onclick="changeGraph('MP3D')">MP3D</a></li>
+                        <li class="text-center col-lg-1 col-md-1"><a href="#" id="buttonMPlus" onclick="changeGraph('MPlus')">MPlus</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div style="text-align:center" id="TSP">
+        </div>
+        <div style="text-align:center; display:none" id="TSP-X">
+        </div>
+        <div style="text-align:center; display:none" id="SP2D">
+        </div>
+        <div style="text-align:center; display:none" id="SP3D">
+        </div>
+        <div style="text-align:center; display:none" id="G2D">
+            <canvas height="1000" width="1000"></canvas>
+        </div>
+        <div style="text-align:center; display:none" id="G3D">
+        </div>
+        <div style="text-align:center; display:none" id="MP3D">
+        </div>
+        <div style="text-align:center; display:none" id="MPlus">
+        </div>
+    </body>
+</html>
