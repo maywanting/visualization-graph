@@ -1,4 +1,3 @@
-if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 $.get('../data/place3D2.json', 'utf-8').done(function(pointData) {
 $.get('../data/sortWeight.json', 'utf-8').done(function(sortData) {
 $.get('../data/brainFace3.json', 'utf-8').done(function(faceData) {
@@ -36,7 +35,7 @@ function init() {
 
     // textures
     var loader = new THREE.TextureLoader();
-    var texture = loader.load( 'src/disc.png' );
+    var texture = loader.load( '../src/disc.png' );
 
     group = new THREE.Group();
     scene.add( group );
