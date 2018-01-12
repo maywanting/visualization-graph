@@ -9,7 +9,7 @@ This repository is aimed to displayed all kinds of visualization graph
 
 ![demo](./src/img/Selection_015.png)
 
-![video](./src/img/demo.mp4)
+![video](./src/img/demo.gif)
 
 # [ploty.js](https://github.com/plotly/plotly.js)
 
