@@ -1,4 +1,6 @@
-const changeGraph = function (type) {
+import $ from 'jquery';
+
+window.changeGraph = function (type) {
     let lastType = display.type;
     if (lastType !== type) {
         display.type = type;
@@ -102,7 +104,7 @@ const display = {
             console.log(nodes);
 
             let cv = $("#G2D canvas")[0].getContext('2d');
-            for (i = 0; i < len; i++) {
+            for (let i = 0; i < len; i++) {
                 cv.beginPath();
                 cv.arc(nodes[i].x, nodes[i].y, 5, 0, 2 * Math.PI, false);
                 cv.fillText(i + 1, nodes[i].x - zoom, nodes[i].y - (zoom*0,5));
@@ -116,8 +118,8 @@ const display = {
                 cv.strokeStyle = '#33F';
                 // cv.fillStyle = 'rgb(255, 51, 51)';
 
-                for (i = 0; i < total; i++) {
-                    weight = dataWeight[i].weight;
+                for (let i = 0; i < total; i++) {
+                    let weight = dataWeight[i].weight;
 
                     let level = weight / dataWeight[0].weight;
                     cv.lineWidth = 3*level;
@@ -125,8 +127,8 @@ const display = {
 
                     cv.beginPath();
                     // cv.arrow(nodes[dataWeight[i].from].x * 7, nodes[dataWeight[i].from].y * 7, nodes[dataWeight[i].to].x * 7, nodes[dataWeight[i].to].y * 7, [0, 0.3, -20*level, 3*level, -25*level, 10*level]);
-                    p0 = nodes[dataWeight[i]['from']];
-                    p1 = nodes[dataWeight[i]['to']];
+                    let p0 = nodes[dataWeight[i]['from']];
+                    let p1 = nodes[dataWeight[i]['to']];
 
                     let degreesInRadians225 = 225*Math.PI/180;
                     let degreesInRadians135 = 135*Math.PI/180;
@@ -163,7 +165,7 @@ const display = {
         await jsonData.getData('place3D2');
         const pointData = jsonData.resData;
 
-        three = new ThreeRenderer('G3D');
+        let three = new ThreeRenderer('G3D');
         three.addPoint(pointData);
 
         await jsonData.getData('sortWeight');
@@ -177,7 +179,7 @@ const display = {
         await jsonData.getData('brainFace3');
         const faceData = jsonData.resData;
 
-        three = new ThreeRenderer('MP3D');
+        let three = new ThreeRenderer('MP3D');
         three.addFace(faceData);
         three.animate();
     },
@@ -192,7 +194,7 @@ const display = {
         await jsonData.getData('brainFace3');
         const faceData = jsonData.resData;
 
-        three = new ThreeRenderer('MPlus');
+        let three = new ThreeRenderer('MPlus');
         three.addPoint(pointData);
         three.addLine(lineData, pointData);
         three.addFace(faceData);
@@ -202,7 +204,7 @@ const display = {
 
 //deal with the json data
 const jsonData = {
-    filePath : '/k-connex/data/',
+    filePath : '/data/',
     resData : 'aaa',
 
     getData : function(fileName) {
@@ -264,7 +266,7 @@ class ThreeRenderer {
 
         // textures
         const loader = new THREE.TextureLoader();
-        const texture = loader.load( 'src/disc.png' );
+        const texture = loader.load( '../src/disc.png' );
 
         const pointsMaterial = new THREE.PointsMaterial( {
             color: 0x0080ff,

@@ -3,10 +3,10 @@ const webpack = require('webpack');
 
 const options = {
     entry:{
-        bundle: './src/main.js'
+        bundle: './src/index.js'
     },
     output: {
-        filename: 'index.js'
+        filename: 'main.js'
     },
     devServer: {
         open: false,
