@@ -35,7 +35,7 @@ function init() {
 
     // textures
     var loader = new THREE.TextureLoader();
-    var texture = loader.load( '../src/disc.png' );
+    var texture = loader.load( '../src/img/disc.png' );
 
     group = new THREE.Group();
     scene.add( group );

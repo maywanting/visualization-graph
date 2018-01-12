@@ -266,7 +266,7 @@ class ThreeRenderer {
 
         // textures
         const loader = new THREE.TextureLoader();
-        const texture = loader.load( '../src/disc.png' );
+        const texture = loader.load( '../src/img/disc.png' );
 
         const pointsMaterial = new THREE.PointsMaterial( {
             color: 0x0080ff,
