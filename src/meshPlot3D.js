@@ -1,4 +1,3 @@
-if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 // $.get('../data/brainFace.json', 'utf-8').done(function(faceData) {
 $.get('../data/brainFace3.json', 'utf-8').done(function(faceData) {
 var group, camera, scene, renderer;
@@ -42,7 +41,7 @@ function init() {
     // textures
 
     var loader = new THREE.TextureLoader();
-    var texture = loader.load( 'disc.png' );
+    var texture = loader.load( '../disc.png' );
 
     group = new THREE.Group();
     scene.add( group );
@@ -97,7 +96,7 @@ function init() {
 
     for (let i = 0; i < faceData.length; i++) {
     var geometry = new THREE.Geometry();
-        console.log(faceData[i]);
+        // console.log(faceData[i]);
         geometry.vertices.push( new THREE.Vector3(faceData[i][0][0], faceData[i][0][1], faceData[i][0][2]));
         geometry.vertices.push( new THREE.Vector3( faceData[i][1][0], faceData[i][1][1], faceData[i][1][2]));
         geometry.vertices.push( new THREE.Vector3( faceData[i][2][0], faceData[i][2][1], faceData[i][2][2]));
