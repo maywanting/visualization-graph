@@ -28,3 +28,7 @@ Nowdays, I create this scene by chartjs.
 linechart
 
 ![demo](./src/img/Selection_052.png)
+
+2D scatter plot graph
+
+![demo](./src/img/Selection_055.png)
